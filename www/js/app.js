@@ -31,7 +31,8 @@ var app  = new Framework7({
           title: 'Apple iPhone X',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
         },
-      ]
+      ],
+      problemes: problemes,
     };
   },
   // App root methods
@@ -43,6 +44,8 @@ var app  = new Framework7({
   // App routes
   routes: routes,
 });
+
+Template7.registerPartial('demander-aide', '<div class="block"><button class="button button-big button-fill color-red">Demander de l\'aide</button></div>');
 
 // Init/Create views
 var homeView = app.views.create('#view-home', {

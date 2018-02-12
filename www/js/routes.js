@@ -17,15 +17,15 @@ routes = [
   },
   {
     path: '/prevention/',
-    url: './pages/prevention.html',
+    templateUrl: './pages/prevention.html',
   },
   {
     path: '/snsm/',
     url: './pages/snsm.html',
   },
   {
-    path: '/avarie-barre/',
-    url: './pages/avarie-barre.html',
+    path: '/problemes/:nomProbleme',
+    componentUrl: './pages/probleme.html',
   },
   // Page Loaders & Router
   {

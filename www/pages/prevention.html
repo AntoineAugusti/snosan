@@ -8,9 +8,9 @@
     <div class="block-title">En cas d'incident</div>
     <div class="list links-list">
       <ul>
-        <li><a href="/avarie-barre/">Avarie de barre</a></li>
-        <li><a href="#">Problème 2</a></li>
-        <li><a href="#">Problème 3</a></li>
+        {{#each $root.problemes}}
+          <li><a href="/problemes/{{ nom }}">{{nom}}</a></li>
+        {{/each}}
       </ul>
     </div>
 
