@@ -23,6 +23,10 @@ routes = [
     path: '/snsm/',
     url: './pages/snsm.html',
   },
+  {
+    path: '/avarie-barre/',
+    url: './pages/avarie-barre.html',
+  },
   // Page Loaders & Router
   {
     path: '/page-loader-template7/:user/:userId/:posts/:postId/',
