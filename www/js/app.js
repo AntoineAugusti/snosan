@@ -71,11 +71,9 @@ $$('#my-login-screen .login-button').on('click', function () {
   app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
 
-function geoFindMe() {
-  var output = document.getElementById("coordonnees");
-
+function findCurrentPosition(output) {
   if (!navigator.geolocation){
-    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+    output.html("Votre navigateur ne supporte pas la géolocalisation");
     return;
   }
 
@@ -83,19 +81,18 @@ function geoFindMe() {
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
 
-    output.innerHTML = 'Latitude ' + latitude + '° Longitude ' + longitude + '°';
+    output.html('Latitude ' + latitude.toFixed(4) + '° Longitude ' + longitude.toFixed(4) + '°');
   }
 
   function error() {
-    output.innerHTML = "Unable to retrieve your location";
+    output.html("Impossible d'obtenir votre position");
   }
 
-  output.innerHTML = "<p>Locating…</p>";
+  output.html('<div class="preloader"></div>');
 
   navigator.geolocation.getCurrentPosition(success, error);
 }
 
 $$(document).on('page:init', '.page[data-name="demander-aide"]', function (e) {
-  console.log(e);
-  geoFindMe();
+  findCurrentPosition($$("#coordonnees"));
 })
