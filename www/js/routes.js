@@ -24,6 +24,10 @@ routes = [
     url: './pages/snsm.html',
   },
   {
+    path: '/demander-aide/',
+    url: './pages/demander-aide.html',
+  },
+  {
     path: '/problemes/:nomProbleme',
     componentUrl: './pages/probleme.html',
   },

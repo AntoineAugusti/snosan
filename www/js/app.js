@@ -45,7 +45,7 @@ var app  = new Framework7({
   routes: routes,
 });
 
-Template7.registerPartial('demander-aide', '<div class="block"><button class="button button-big button-fill color-red">Demander de l\'aide</button></div>');
+Template7.registerPartial('demander-aide', '<div class="block"><a href="/demander-aide/"><button class="button button-big button-fill color-red">Demander de l\'aide</button></a></div>');
 
 // Init/Create views
 var homeView = app.views.create('#view-home', {
@@ -70,3 +70,32 @@ $$('#my-login-screen .login-button').on('click', function () {
   // Alert username and password
   app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
+
+function geoFindMe() {
+  var output = document.getElementById("coordonnees");
+
+  if (!navigator.geolocation){
+    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+    return;
+  }
+
+  function success(position) {
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+    output.innerHTML = 'Latitude ' + latitude + '° Longitude ' + longitude + '°';
+  }
+
+  function error() {
+    output.innerHTML = "Unable to retrieve your location";
+  }
+
+  output.innerHTML = "<p>Locating…</p>";
+
+  navigator.geolocation.getCurrentPosition(success, error);
+}
+
+$$(document).on('page:init', '.page[data-name="demander-aide"]', function (e) {
+  console.log(e);
+  geoFindMe();
+})
