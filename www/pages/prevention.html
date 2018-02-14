@@ -6,10 +6,19 @@
   </div>
   <div class="page-content">
     <div class="block-title">En cas d'incident</div>
-    <div class="list links-list">
+    <div class="list media-list">
       <ul>
         {{#each $root.problemes}}
-          <li><a href="/problemes/{{ nom }}">{{nom}}</a></li>
+        <li>
+          <a href="/problemes/{{ nom }}" class="item-link item-content">
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">{{nom}}</div>
+              </div>
+              <div class="item-subtitle">{{sous_titre}}</div>
+            </div>
+          </a>
+        </li>
         {{/each}}
       </ul>
     </div>

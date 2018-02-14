@@ -1,14 +1,25 @@
 problemes = [
   {
     "nom": "Avarie de barre",
+    "sous_titre": "Vous ne maîtrisez plus la conduite",
     "blocks": [
       {
         "titre": "Avarie au large",
-        "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nulla ac enim sagittis luctus quis nec erat. Phasellus quis posuere elit. Fusce non purus ornare, auctor eros id, tincidunt nulla. Quisque vitae auctor lorem. Phasellus gravida tempus tellus in aliquet. Donec mollis pellentesque ante, at pharetra nulla venenatis ac. Nunc tristique vitae lorem a feugiat. Curabitur vitae tempor sapien."
+        "contenu": "Vous ne maîtrisez plus la conduite de votre navire au large. Mettez votre barre à zéro. Vérifiez que vous n'avez pas toucher un haut fond ou un autre objet non immergé. Vérifiez que vous n'avez pas de voie d'eau. Contactez au plus vite le CROSS de votre zone de navigation et suivez ces instructions."
       },
       {
         "titre": "Près d'un épi rocheux",
-        "contenu": "Pellentesque metus diam, faucibus sit amet molestie sit amet, gravida eget velit. Quisque purus ligula, molestie at lobortis quis, auctor id dui. Sed non pretium sem, vitae sagittis orci. Suspendisse urna risus, faucibus sed congue eget, facilisis a nunc."
+        "contenu": "Vous ne maîtrisez plus la conduite de votre navire près d'un épi rocheux. Mettez votre barre à zéro. Vérifiez que vous n'avez pas toucher un haut fond ou un autre objet non immergé. Vérifiez que vous n'avez pas de voie d'eau et dans quelle situation vous êtes (échoué ou à la dérive). Préparez votre ancre si vous êtes à la dérive et immergez-la si le fond le permet. Contactez au plus vite le CROSS de votre zone de navigation et suivez ces instructions."
+      }
+    ]
+  },
+  {
+    "nom": "Homme à la mer",
+    "sous_titre": "Un équipier vient de tomber à la mer",
+    "blocks": [
+      {
+        "titre": "Que faire",
+        "contenu": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa harum non iste, ut optio quisquam repellendus, maxime dolorem magni quibusdam a unde eius tenetur nesciunt aspernatur modi, autem nam hic."
       }
     ]
   },
